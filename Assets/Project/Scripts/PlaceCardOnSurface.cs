@@ -38,9 +38,9 @@ public class PlaceCardOnSurface : MonoBehaviour
 
         var pos = pose.position;
 
-        var rot = pose.rotation * Quaternion.Euler(0, 180f, 0);
+        var rot = pose.rotation * Quaternion.Euler(0, 180f, 0) * Quaternion.Euler(- 90f, 0, 0);
 
-        var card = cards[Random.Range(0, cards.Length)];
+        var card = cards[ Random.Range( 0, cards.Length ) ];
 
         var go = Instantiate(card, pos, rot);
 
